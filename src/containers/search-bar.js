@@ -14,9 +14,16 @@ class SearchBar extends Component{
         });
     };
 
+    onFormSubmit = (e)=>{
+        e.preventDefault();
+    };
+
     render(){
         return(
-            <form className="input-group">
+            <form 
+                className="input-group" 
+                onSubmit={this.onFormSubmit}
+            >
                 <input 
                     className="form-control" 
                     placeholder="Get a five-day forecast n your favorite cities"
